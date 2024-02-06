@@ -1,41 +1,35 @@
 import POPOSSpace from '../POPOSSpace/POPOSSpace';
 import './POPOSList.css';
+import data from '../../sfpopos-data.json';
+
+interface JsonResponse {
+	title: string;
+	desc: string;
+	address: string;
+	hours: string;
+	geo: {
+		lat: number;
+		lon: number;
+	};
+	images: string[];
+	features: string[];
+}
 
 const POPOSList = () => {
-	return (
-		<div className='POPOSList'>
+	const spaces = data.map(({title, address, images, hours}: JsonResponse, index: number) => {
+		return (
 			<POPOSSpace
-				name='50 California Street'
-				address='50 California St.'
-				image='50-california-st.jpg'
+				id={index}
+				key={index}
+				name={title}
+				address={address}
+				image={images[0]}
+				hours={hours}
 			/>
-			<POPOSSpace
-				name='525 Market Street Plaza'
-				address='525 Market St.'
-				image='525-market-street-plaza.jpg'
-			/>
-			<POPOSSpace
-				name='555 California Street'
-				address='555 California St.'
-				image='555-california.jpg'
-			/>
-			<POPOSSpace
-				name='101 California Street'
-				address='101 California St.'
-				image='101-california.jpg'
-			/>
-			<POPOSSpace
-				name='343 Sansome Roof Garden'
-				address='343 Sansome St.'
-				image='343-sansome-roof-garden.jpg'
-			/>
-			<POPOSSpace
-				name='525 Market Street Plaza'
-				address='525 Market St.'
-				image='525-market-street-plaza.jpg'
-			/>
-		</div>
-	);
+		);
+	});
+
+	return <div className='POPOSList'>{spaces}</div>;
 };
 
 export default POPOSList;
