@@ -1,9 +1,9 @@
 import POPOSSpace from '../POPOSSpace/POPOSSpace';
+import './POPOSList.css';
 
 const POPOSList = () => {
 	return (
-		<div>
-			<h1>Keep your eye on this space for future content...</h1>
+		<div className='POPOSList'>
 			<POPOSSpace
 				name='50 California Street'
 				address='50 California St.'
@@ -23,6 +23,16 @@ const POPOSList = () => {
 				name='101 California Street'
 				address='101 California St.'
 				image='101-california.jpg'
+			/>
+			<POPOSSpace
+				name='343 Sansome Roof Garden'
+				address='343 Sansome St.'
+				image='343-sansome-roof-garden.jpg'
+			/>
+			<POPOSSpace
+				name='525 Market Street Plaza'
+				address='525 Market St.'
+				image='525-market-street-plaza.jpg'
 			/>
 		</div>
 	);

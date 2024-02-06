@@ -1,5 +1,6 @@
 import Title from './Components/Title/Title';
 import POPOSList from './Components/POPOSList/POPOSList';
+import Footer from './Components/Footer/Footer';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
 		<>
 			<Title />
 			<POPOSList />
+			<Footer />
 		</>
 	);
 }

@@ -1,19 +1,20 @@
-import logo from '/vite.svg';
+import './POPOSSpace.css';
 
 interface SpaceProps {
 	name: string;
 	image: string;
-	address: string
+	address: string;
 }
 
-function POPOSSpace({name, image, address}: SpaceProps) {
+function POPOSSpace({ name, image, address }: SpaceProps) {
 	return (
-		<div>
-			<img src={`/images/${image}`}     
-        width="300"
-        height="300"
-        alt="50 Califonia St."
-      />
+		<div className='POPOSSpace'>
+			<img
+				src={`/images/${image}`}
+				width='300'
+				height='300'
+				alt='50 Califonia St.'
+			/>
 			<h1>{name}</h1>
 			<div>{address}</div>
 		</div>
