@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import POPOSFeatureList from '../POPOSFeatureList/POPOSFeatureList';
 import './POPOSDetails.css';
 import data from '../../sfpopos-data.json';
 import.meta.env.PUBLIC_URL;
@@ -16,7 +17,7 @@ interface POPOSDetail {
 	features: string[];
 }
 
-const POPOSDetail = () => {
+const POPOSDetail = (props) => {
 	const params = useParams();
 	const id = parseInt(params.id! || '');
 
@@ -36,10 +37,10 @@ const POPOSDetail = () => {
 
 			<div className='POPOSDetails-info'>
 				<h1 className='POPOSDetails-title'>{title}</h1>
-				<p className="POPOSDetails-desc">{desc}</p>
-				<p className="POPOSDetails-hours">{hours}</p>
-				<p className="POPOSDetails-features">{features}</p>
-				<p className="POPOSDetails-geo">
+				<p className='POPOSDetails-desc'>{desc}</p>
+				<p className='POPOSDetails-hours'>{hours}</p>
+				<POPOSFeatureList features={features} />
+				<p className='POPOSDetails-geo'>
 					{geo.lat} {geo.lon}
 				</p>
 			</div>
