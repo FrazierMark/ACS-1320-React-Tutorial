@@ -33,12 +33,12 @@
 @media only screen and (max-width: 960px) {
 	.POPOSDetails {
 		flex-direction: column;
-		width: auto; /* Adjust width as needed */
+		width: auto; 
 	}
 
 	.POPOSDetails .POPOSDetails-info,
 	.POPOSDetails .POPOSDetails-image {
-		width: 100%; /* Make both take full width */
+		width: 100%;
 	}
 }
 
