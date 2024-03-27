@@ -27,3 +27,25 @@
 .POPOSDetails .POPOSDetails-hours {
 	font-size: 1.5em;
 }
+
+
+/* Smaller screens and tablets */
+@media only screen and (max-width: 960px) {
+	.POPOSDetails {
+		flex-direction: column;
+		width: auto; /* Adjust width as needed */
+	}
+
+	.POPOSDetails .POPOSDetails-info,
+	.POPOSDetails .POPOSDetails-image {
+		width: 100%; /* Make both take full width */
+	}
+}
+
+/* Small screens mobile */
+@media only screen and (max-width: 700px) {
+	.POPOSDetails .POPOSDetails-image {
+		flex-direction: column;
+		flex: 1;
+	}
+}
