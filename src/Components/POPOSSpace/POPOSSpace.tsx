@@ -25,7 +25,7 @@ function POPOSSpace({ id, name, image, address, hours }: SpaceProps) {
 			</Link>
 			<div className='POPOSSpace-info'>
 				<div>{address}</div>
-				<div style={{ fontStyle: 'italic', color: 'blue' }}>{hours}</div>
+				<div style={{ fontStyle: 'italic', color: 'green' }}>{hours}</div>
 			</div>
 		</div>
 	);

@@ -1,21 +1,21 @@
 .POPOSSpace {
-  position: relative;
-  width: 100%;
-  text-align: center;
+	position: relative;
+	width: 100%;
+	text-align: center;
 }
 
 .POPOSSpace > img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .POPOSSpace .POPOSSpace-title {
-  text-decoration: none;
-  color: #000;
+	text-decoration: none;
+	color: #000;
 }
 
 .POPOSSpace h1 {
-  display: block;
+	display: block;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -37,4 +37,20 @@
 	display: inline-block;
 	padding: 0.25em 0.5em;
 	background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Smaller screens and tablets */
+@media only screen and (max-width: 960px) {
+	.POPOSSpace img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+/* Small screens mobile */
+@media only screen and (max-width: 700px) {
+	.POPOSSpace img {
+		width: 100%;
+		height: auto;
+	}
 }
