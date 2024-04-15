@@ -13,16 +13,15 @@ function POPOSSpace({ id, name, image, address, hours }: SpaceProps) {
 	return (
 		<div className='POPOSSpace'>
 			<Link to={`/details/${id}`}>
+				<h1 className='POPOSSpace-title'>{name}</h1>
 				<img
 					src={`images/${image}`}
 					width='300'
 					height='300'
-					alt='50 Califonia St.'
+					alt={`A beautiful space at ${address}`}
 				/>
 			</Link>
-			<Link className='POPOSSpace-title' to={`/details/${id}`}>
-				<h1>{name}</h1>
-			</Link>
+
 			<div className='POPOSSpace-info'>
 				<div>{address}</div>
 				<div style={{ fontStyle: 'italic', color: 'green' }}>{hours}</div>

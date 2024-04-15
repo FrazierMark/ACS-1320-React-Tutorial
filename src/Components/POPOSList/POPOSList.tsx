@@ -19,7 +19,7 @@ interface JsonResponse {
 const POPOSList = () => {
 	const [query, setQuery] = useState('');
 	const spaces = data.filter(obj => obj.title.toLowerCase().includes(query.toLowerCase()) || obj.address.toLowerCase().includes(query.toLowerCase()))
-  .map(({ title, address, images, hours }: JsonResponse, id: number) => {
+	.map(({ title, address, images, hours }: JsonResponse, id: number) => {
 			return (
 				<POPOSSpace
 					id={id}
@@ -35,13 +35,17 @@ const POPOSList = () => {
 
 	return (
 		<div className='POPOSList'>
-			<form>
+			<form className="search-bar">
+				<label htmlFor="search-input">Search for Public Space</label>
+				<div className="bar-container">
 				<input
+					id="search-input"
 					value={query}
 					placeholder='search'
 					onChange={(e) => setQuery(e.target.value)}
 				/>
 				<button type='submit'>Submit</button>
+				</div>
 			</form>
 			{spaces}
 		</div>

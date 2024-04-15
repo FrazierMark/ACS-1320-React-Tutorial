@@ -31,6 +31,15 @@
 	border-bottom-right-radius: 0.5em;
 }
 
+.search-bar {
+	display: flex;
+	flex-direction: column;
+}
+
+.bar-container {
+	display: flex;
+}
+
 /* Smaller screens and tablets */
 @media only screen and (max-width: 960px) {
 	.POPOSList {
